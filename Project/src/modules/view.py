@@ -16,9 +16,9 @@ def viewing_case():
             case 2:
                 print("2")
             case 3:
-                print("3")
+                read_list_notes()
             case 4:
-                print("4")
+                delete_notes()
             case 5:
                 print("--- EXIT programm ---")
                 exit()

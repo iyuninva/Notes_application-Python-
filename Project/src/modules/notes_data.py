@@ -28,3 +28,5 @@ class Notes():
 
     def display_info(self):
         return f'{date_time()} \nid: {self.__id} \nTitle: {self.__title} \n - {self.__body} \n'
+    
+    
