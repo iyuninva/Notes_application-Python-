@@ -1,0 +1,238 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.programm_config",
+        "description": "modules.programm_config",
+        "isExtraImport": true,
+        "detail": "modules.programm_config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.programm_config",
+        "description": "modules.programm_config",
+        "isExtraImport": true,
+        "detail": "modules.programm_config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.notes_data",
+        "description": "modules.notes_data",
+        "isExtraImport": true,
+        "detail": "modules.notes_data",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.file_config",
+        "description": "modules.file_config",
+        "isExtraImport": true,
+        "detail": "modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.file_config",
+        "description": "modules.file_config",
+        "isExtraImport": true,
+        "detail": "modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.data_search",
+        "description": "modules.data_search",
+        "isExtraImport": true,
+        "detail": "modules.data_search",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "modules.date_time",
+        "description": "modules.date_time",
+        "isExtraImport": true,
+        "detail": "modules.date_time",
+        "documentation": {}
+    },
+    {
+        "label": "id_list",
+        "kind": 2,
+        "importPath": "Project.src.modules.data_search",
+        "description": "Project.src.modules.data_search",
+        "peekOfCode": "def id_list():\n    id = 0\n    for i in os.listdir():\n        if i.endswith(\".cvs\"):\n            mmax = int(i[0])\n            if mmax > id:\n                id = mmax\n    id += 1 \n    return id\ndef title_note_list(id):",
+        "detail": "Project.src.modules.data_search",
+        "documentation": {}
+    },
+    {
+        "label": "title_note_list",
+        "kind": 2,
+        "importPath": "Project.src.modules.data_search",
+        "description": "Project.src.modules.data_search",
+        "peekOfCode": "def title_note_list(id):\n    for i in os.listdir():\n        if i.endswith(\".cvs\"):\n            if id == i[0]:\n                name_note = i\n    return name_note",
+        "detail": "Project.src.modules.data_search",
+        "documentation": {}
+    },
+    {
+        "label": "date_time",
+        "kind": 2,
+        "importPath": "Project.src.modules.date_time",
+        "description": "Project.src.modules.date_time",
+        "peekOfCode": "def date_time():\n    date_time_now = datetime.datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")\n    return date_time_now",
+        "detail": "Project.src.modules.date_time",
+        "documentation": {}
+    },
+    {
+        "label": "data_new_id_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def data_new_id_notes():\n    id = str(id_list())\n    note.set_id(id)\n    return note\ndef data_id_notes():\n    print(\"\\n- Enter the id of the note\")\n    note.set_id(text_input())\n    return note\ndef data_title_notes():\n    print(\"\\n- Enter the name of the note\")",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "data_id_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def data_id_notes():\n    print(\"\\n- Enter the id of the note\")\n    note.set_id(text_input())\n    return note\ndef data_title_notes():\n    print(\"\\n- Enter the name of the note\")\n    note.set_title(text_input())\n    return note\ndef data_body_notes():\n    print(\"\\n- Enter text note\")",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "data_title_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def data_title_notes():\n    print(\"\\n- Enter the name of the note\")\n    note.set_title(text_input())\n    return note\ndef data_body_notes():\n    print(\"\\n- Enter text note\")\n    note.set_body(text_input())\n    return note\ndef add_notes():\n    try:",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "data_body_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def data_body_notes():\n    print(\"\\n- Enter text note\")\n    note.set_body(text_input())\n    return note\ndef add_notes():\n    try:\n        new_file = open(data_new_id_notes().get_id() + \"_\" +\n                        data_title_notes().get_title() + \".cvs\", \"w\")\n        data_body_notes().get_body()\n        new_file.write(note.display_info())",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "add_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def add_notes():\n    try:\n        new_file = open(data_new_id_notes().get_id() + \"_\" +\n                        data_title_notes().get_title() + \".cvs\", \"w\")\n        data_body_notes().get_body()\n        new_file.write(note.display_info())\n        print(\"\\n- The file was created successfully\\n\")\n    except (FileExistsError):\n        print(\"\\nERROR: file creation error\\n\")\n    finally:",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "edit_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def edit_notes():\n    try:\n        id = data_id_notes().get_id()\n        id_file = open(title_note_list(id), \"w\")\n        data_body_notes().get_body()\n        id_file.write(note.display_info())\n    except (FileNotFoundError):\n        print(\"\\nERROR: file not found\\n\")\n    finally:\n        id_file.close()",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "read_list_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def read_list_notes():\n    try:\n        id = data_id_notes().get_id()\n        read_file = open(title_note_list(id), \"r\")\n        print(read_file.read() + \"\\n\")\n    except (FileNotFoundError):\n        print(\"\\nERROR: file not found\\n\")\n    finally:\n        read_file.close()\ndef delete_notes():",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "delete_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def delete_notes():\n    try:\n        id = data_id_notes().get_id()\n        os.remove(title_note_list(id))\n        print(\"\\n- The file deleted\\n\")\n    except (FileNotFoundError):\n        print(\"\\nERROR: file not found\\n\")\ndef sorted_list_notes():\n    dict_notes = dict({})\n    try:",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "sorted_list_notes",
+        "kind": 2,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "def sorted_list_notes():\n    dict_notes = dict({})\n    try:\n        for i in os.listdir():\n            if i.endswith(\".cvs\"):\n                read_file = open(i, \"r\")\n                dict_notes[i[0]] = read_file.read(19)\n                sorted_notes = sorted(dict_notes.items(), key=lambda x: x[1])\n        print(\"\\n\", sorted_notes, \"\\n\")\n    except (Exception):",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "note",
+        "kind": 5,
+        "importPath": "Project.src.modules.file_config",
+        "description": "Project.src.modules.file_config",
+        "peekOfCode": "note = Notes()\ndef data_new_id_notes():\n    id = str(id_list())\n    note.set_id(id)\n    return note\ndef data_id_notes():\n    print(\"\\n- Enter the id of the note\")\n    note.set_id(text_input())\n    return note\ndef data_title_notes():",
+        "detail": "Project.src.modules.file_config",
+        "documentation": {}
+    },
+    {
+        "label": "Notes",
+        "kind": 6,
+        "importPath": "Project.src.modules.notes_data",
+        "description": "Project.src.modules.notes_data",
+        "peekOfCode": "class Notes():\n    def __init__(self):\n        self.__id = \"0\"\n        self.__title = \"None\"\n        self.__body = \"None\"\n    def get_id(self):\n        return self.__id\n    def set_id(self, id):\n        self.__id = id\n    def get_title(self):",
+        "detail": "Project.src.modules.notes_data",
+        "documentation": {}
+    },
+    {
+        "label": "command_input",
+        "kind": 2,
+        "importPath": "Project.src.modules.programm_config",
+        "description": "Project.src.modules.programm_config",
+        "peekOfCode": "def command_input():\n    while True:\n        try:\n            text_command = int(input(\"The input field: \"))\n            return text_command\n        except ValueError:\n            print(\"\\nERROR: ValueError\\n\")\ndef text_input():\n    while True:\n        try:",
+        "detail": "Project.src.modules.programm_config",
+        "documentation": {}
+    },
+    {
+        "label": "text_input",
+        "kind": 2,
+        "importPath": "Project.src.modules.programm_config",
+        "description": "Project.src.modules.programm_config",
+        "peekOfCode": "def text_input():\n    while True:\n        try:\n            text_command = input(\"The input field: \")\n            return text_command\n        except ValueError:\n            print(\"\\nERROR: ValueError\\n\")",
+        "detail": "Project.src.modules.programm_config",
+        "documentation": {}
+    },
+    {
+        "label": "start_page",
+        "kind": 2,
+        "importPath": "Project.src.modules.view_user",
+        "description": "Project.src.modules.view_user",
+        "peekOfCode": "def start_page():\n    print(\"--- Welcome ---\\n\")\n    print(\" 1. ADD\\n 2. EDIT\\n 3. READ LIST\\n 4. DELETE\\n 5. SORTED LIST\\n 6. EXIT\")\n    viewing_case()\ndef viewing_case():\n    try:\n        match command_input():\n            case 1:\n                add_notes()\n                start_page()",
+        "detail": "Project.src.modules.view_user",
+        "documentation": {}
+    },
+    {
+        "label": "viewing_case",
+        "kind": 2,
+        "importPath": "Project.src.modules.view_user",
+        "description": "Project.src.modules.view_user",
+        "peekOfCode": "def viewing_case():\n    try:\n        match command_input():\n            case 1:\n                add_notes()\n                start_page()\n            case 2:\n                edit_notes()\n                start_page()\n            case 3:",
+        "detail": "Project.src.modules.view_user",
+        "documentation": {}
+    }
+]

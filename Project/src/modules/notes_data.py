@@ -4,7 +4,7 @@ from modules.date_time import *
 class Notes():
 
     def __init__(self):
-        self.__id = "1"
+        self.__id = "0"
         self.__title = "None"
         self.__body = "None"
 
@@ -28,5 +28,3 @@ class Notes():
 
     def display_info(self):
         return f'{date_time()} \nid: {self.__id} \nTitle: {self.__title} \n - {self.__body} \n'
-    
-    
